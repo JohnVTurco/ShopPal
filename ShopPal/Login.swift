@@ -207,6 +207,7 @@ struct LoginView: View {
 
 
 //API call for logging in 
+
 func login(email: String, password: String) -> [String: Any] {
     let url = URL(string: "https://www.wangevan.com/user/login")!
     var request = URLRequest(url: url)
@@ -238,3 +239,4 @@ func login(email: String, password: String) -> [String: Any] {
     semaphore.wait()
     return responseJson
 }
+ 
