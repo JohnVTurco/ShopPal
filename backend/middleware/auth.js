@@ -20,7 +20,7 @@ const auth = async (req, res, next) => {
     if (Object.keys(user).length == 0) return res.status(400).json("Wrong email or password")
 
     // Check if password is correct
-    const validPassword = await bcrypt.compare(req.body.password, user.Item.password);
+    const validPassword = await bcrypt.compare(req.body.password, user.Item.password);  //decrypt
     if (!validPassword) return res.status(400).json("Wrong email or password");
 
     next();
