@@ -7,7 +7,7 @@ AWS.config.update({
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 });
 
-// DynamoDB client initialization
+// DynamoDB client initialization 
 const ddbClient = new AWS.DynamoDB.DocumentClient();
 
 module.exports = ddbClient;
