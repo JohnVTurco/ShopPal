@@ -13,7 +13,7 @@ const parseReceipt = async (fileName) => {
     // Parse receipt using Tesseract
     const text = (await Tesseract.recognize(receiptImagePath, 'eng')).data.text;
 
-    // Parses receipt using OpenAI
+    // Parses receipt using OpenAI api
     const response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: `Parse this receipt and return the store name, address, name and price of each item, 
