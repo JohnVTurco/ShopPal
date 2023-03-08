@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const multer = require("multer");
 
+
 // Import routes and auth middleware
 const userRoute = require("./routes/user");
 const receiptRoute = require("./routes/receipt");
